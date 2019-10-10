@@ -3,6 +3,7 @@
   <head>
     <title>Roman Numeral Converter</title>
     <link href="StyleSheet.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" type="text/css" rel="stylesheet"/>
     <script type="text/JavaScript">
 
       function convertToRoman() {
@@ -63,13 +64,22 @@
     </script>
   </head>
   <body>
-    <h1>Roman Numeral Converter</h1>
-    <form name="converter">
-      <label for="numer">Enter Number:</label>
-      <input type="text" id="number" value="" onchange="convertToRoman();"/>
-      <br/>
-      <label for="numeral">Roman Numeral:</label>
-      <input type="text" id="numeral" value=""/>
-    </form>
+    <main>
+      <div id="background">
+        <img id="background-photo" src="Roman-Small.jpg"/>
+      </div>
+      <div id="converter">
+        <h1>ROMAN NUMERAL CONVERTER</h1>
+        <br/>
+        <form name="roman-numeral-converter">
+          <label for="numer">Enter Number:</label>
+          <input type="text" id="number" value="" onchange="convertToRoman();"/>
+          <br/>
+          <br/>
+          <label for="numeral">Roman Numeral:</label>
+          <input type="text" id="numeral" value=""/>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
