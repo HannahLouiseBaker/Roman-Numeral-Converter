@@ -8,13 +8,25 @@
 main {
   display: grid;
   grid-template-rows: 1fr;
-  align-items: center;
-  justify-content: center;
-  background-color: #ACB6C2;
+  justify-items: end;
+  background-color: /*#8A99FE;*/#C2ABFD;
 }
 
-h1, label {
+h1 {
+  text-align: center;
   padding: 10px;
+}
+
+label {
+  font-size: 20px;
+  padding: 10px;
+}
+
+input {
+  font-size: 18px;
+}
+
+h1, label, input {
   font-family: "Cormorant Garamond";
 }
 
@@ -27,18 +39,45 @@ h1, label {
   height: 100vh;
 }
 
-#converter {
+#converter-container {
   grid-area: 1 / 1 / 2 / 2;
   z-index: 2;
-  border-style: solid;
-  border-width: 4px;
-  border-color: #ACB6C2;
-  margin: auto;
-  padding: 40px;
-  background-color: rgba(255, 255, 255, 0.4);
-  /*text-align: center;*/
+  margin: 80px auto;
 }
 
+#converter {
+  border-style: solid;
+  border-width: 0.1px;
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 40px 40px 80px 40px;
+}
+
+@media (max-width: 1050px) {
+  #background {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #background-photo {
+    background-position: right;
+    float: right;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+}
 /*#background {
   height: 100vh;
   width: auto;
