@@ -1,0 +1,47 @@
+/* Style Sheet */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  background-color: #ACB6C2;
+}
+
+h1, label {
+  padding: 10px;
+  font-family: "Cormorant Garamond";
+}
+
+#background {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+#background-photo {
+  width: auto;
+  height: 100vh;
+}
+
+#converter {
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 2;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #ACB6C2;
+  margin: auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.4);
+  /*text-align: center;*/
+}
+
+/*#background {
+  height: 100vh;
+  width: auto;
+  background: url("Roman-Small.jpg");
+  background-position: right;
+}*/
