@@ -65,20 +65,22 @@
   </head>
   <body>
     <main>
-      <div id="background">
-        <img id="background-photo" src="Roman-Small.jpg"/>
+      <div id="converter-container">
+        <div id="converter">
+          <h1>ROMAN NUMERAL CONVERTER</h1>
+          <br/>
+          <form name="roman-numeral-converter">
+            <label for="numer">Enter Number:</label>
+            <input type="text" id="number" value="" onchange="convertToRoman();"/>
+            <br/>
+            <br/>
+            <label for="numeral">Roman Numeral:</label>
+            <input type="text" id="numeral" value=""/>
+          </form>
+        </div>
       </div>
-      <div id="converter">
-        <h1>ROMAN NUMERAL CONVERTER</h1>
-        <br/>
-        <form name="roman-numeral-converter">
-          <label for="numer">Enter Number:</label>
-          <input type="text" id="number" value="" onchange="convertToRoman();"/>
-          <br/>
-          <br/>
-          <label for="numeral">Roman Numeral:</label>
-          <input type="text" id="numeral" value=""/>
-        </form>
+      <div id="background">
+        <img id="background-photo" src="Roman-Purple.jpg"/>
       </div>
     </main>
   </body>
