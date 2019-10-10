@@ -1,1 +1,75 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roman Numeral Converter</title>
+    <link href="StyleSheet.css" type="text/css" rel="stylesheet"/>
+    <script type="text/JavaScript">
+
+      function convertToRoman() {
+        let num = parseInt(document.getElementById("number").value);
+        //Split number into array and reverse
+        let numArr = num.toString().split('').reverse();
+
+        //Create an emptry string to add letters to
+        let str = '';
+
+        //Find out how many thousands and add to string
+        let thousands = numArr.slice(3, numArr.length).reverse().join('');
+        str += 'M'.repeat(thousands);
+
+        //Create an empty variable for while loop
+        let newNum;
+
+        //Set i to the highest index of array
+        //let i = numArr.length - 1;
+
+        for (let i = 2; i >= 0; i--) {
+          if (i === 2) {
+            if (numArr[i] >= 5) {
+              str+= 'D';
+              newNum = numArr[i] - 5;
+              str += 'C'.repeat(newNum);
+            } else {
+              str += 'C'.repeat(numArr[i]);
+            }
+          } else if (i === 1) {
+            if (numArr[i] >= 5) {
+              str += 'L';
+              newNum = numArr[i] - 5;
+              str += 'X'.repeat(newNum);
+            } else {
+              str += 'X'.repeat(numArr[i]);
+            }
+          } else if (i === 0) {
+            if (numArr[i] >= 5) {
+              str += 'V';
+              newNum = numArr[i] - 5;
+              str += 'I'.repeat(newNum);
+            } else {
+              str += 'I'.repeat(numArr[i]);
+            }
+          }
+        }
+
+        let nine = /VIIII/;
+        let four = /IIII/;
+        let ninety = /LXXXX/;
+        let forty = /XXXX/;
+        let nineHundred = /DCCCC/;
+        let fourHundred = /CCCC/;
+
+        document.getElementById("numeral").value = str.replace(nine, 'IX').replace(four, 'IV').replace(ninety, 'XC').replace(forty, 'XL').replace(nineHundred, 'CM').replace(fourHundred, 'CD');
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Roman Numeral Converter</h1>
+    <form name="converter">
+      <label for="numer">Enter Number:</label>
+      <input type="text" id="number" value="" onchange="convertToRoman();"/>
+      <br/>
+      <label for="numeral">Roman Numeral:</label>
+      <input type="text" id="numeral" value=""/>
+    </form>
+  </body>
+</html>
