@@ -9,7 +9,7 @@ main {
   display: grid;
   grid-template-rows: 1fr;
   justify-items: end;
-  background-color: /*#8A99FE;*/#C2ABFD;
+  background-color: /*#8A99FE;#C2ABFD*/#ffc0c0/*#ff7575*/;
 }
 
 h1 {
@@ -27,7 +27,7 @@ input {
 }
 
 h1, label, input {
-  font-family: "Cormorant Garamond";
+  font-family: "Nunito";
 }
 
 #background {
@@ -36,7 +36,8 @@ h1, label, input {
 
 #background-photo {
   width: auto;
-  height: 100vh;
+  height: 60vh;
+  margin: 35vh 0 5vh 0;
 }
 
 #converter-container {
@@ -47,9 +48,9 @@ h1, label, input {
 
 #converter {
   border-style: solid;
-  border-width: 0.1px;
-  border-color: rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.2);
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 40px 40px 80px 40px;
 }
 
@@ -62,6 +63,8 @@ h1, label, input {
   #background-photo {
     background-position: right;
     float: right;
+    height: 55vh;
+    margin: 35vh 0 10vh 0;
   }
 }
 
@@ -76,6 +79,11 @@ h1, label, input {
 
   input {
     font-size: 14px;
+  }
+
+  #background-photo {
+    height: 45vh;
+    margin: 45vh 0 10vh 0;
   }
 }
 /*#background {
