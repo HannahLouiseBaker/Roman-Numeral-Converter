@@ -1,5 +1,4 @@
 /* Style Sheet */
-/*Test*/
 
 * {
   margin: 0;
@@ -10,7 +9,7 @@ main {
   display: grid;
   grid-template-rows: 1fr;
   justify-items: end;
-  background-color: /*#8A99FE;#C2ABFD*/#ffc0c0/*#ff7575*/;
+  background-color: #ffc0c0;
 }
 
 h1 {
