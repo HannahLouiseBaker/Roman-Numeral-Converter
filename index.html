@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" type="text/css" rel="stylesheet"/>
     <script type="text/JavaScript">
 
-      function convertToRoman() {
+      let convertToRoman = () => {
         let num = parseInt(document.getElementById("number").value);
         //Split number into array and reverse
         let numArr = num.toString().split('').reverse();
