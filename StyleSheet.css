@@ -26,8 +26,17 @@ input {
   font-size: 18px;
 }
 
-h1, label, input {
+h1, p, label, input {
   font-family: "Nunito";
+}
+
+#numeral {
+  /*display: inline-block;*/
+  font-size: 18px;
+}
+
+#answer {
+  display: inline-block;
 }
 
 #background {
@@ -84,6 +93,15 @@ h1, label, input {
   #background-photo {
     height: 45vh;
     margin: 45vh 0 10vh 0;
+  }
+}
+
+@media (max-height: 400px) {
+  main {
+    align-items: end;
+  }
+  #background {
+    align-items: end;
   }
 }
 /*#background {
