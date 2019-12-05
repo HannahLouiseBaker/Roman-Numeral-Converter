@@ -72,12 +72,14 @@
           <form name="roman-numeral-converter">
             <label for="numer">Enter Number:</label>
             <input type="text" id="number" value=""/>
-            <input type="button" id="go-button" value="Go!" onclick="convertToRoman();"/>
             <br/>
             <br/>
             <label for="numeral">Roman Numeral:</label>
             <div id="answer">
-            <p id="numeral"></p>
+              <output id="numeral"></output>
+            </div>
+            <div id="button-container">
+              <input type="button" id="convert" value="Convert" onclick="convertToRoman();"/>
             </div>
           </form>
         </div>
