@@ -22,20 +22,28 @@ label {
   padding: 10px;
 }
 
-input {
+input, output {
   font-size: 18px;
 }
 
-h1, p, label, input {
+h1, label, input, output {
   font-family: "Nunito";
-}
-
-#numeral {
-  font-size: 18px;
 }
 
 #answer {
   display: inline-block;
+}
+
+#button-container {
+  display: grid;
+  justify-items: center;
+}
+
+#convert {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 18px;
 }
 
 #background {
@@ -59,7 +67,7 @@ h1, p, label, input {
   border-width: 1px;
   border-color: rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.3);
-  padding: 40px 40px 80px 40px;
+  padding: 40px;
 }
 
 @media (max-width: 1050px) {
@@ -93,6 +101,13 @@ h1, p, label, input {
     height: 45vh;
     margin: 45vh 0 10vh 0;
   }
+
+  #convert {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
 }
 
 @media (max-height: 400px) {
@@ -103,9 +118,4 @@ h1, p, label, input {
     align-items: end;
   }
 }
-/*#background {
-  height: 100vh;
-  width: auto;
-  background: url("Roman-Small.jpg");
-  background-position: right;
-}*/
+
